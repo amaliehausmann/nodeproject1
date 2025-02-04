@@ -40,10 +40,10 @@ CarModel.init(
   },
   {
     sequelize,
-    modelName: "car",
-    underscored: true,
-    freezeTableName: true,
-    createdAt: true,
-    updatedAt: true,
+    modelName: "car", //Modellens navn
+    underscored: true, //True: car_brand || false: carBrands
+    freezeTableName: true, //True: car || false: cars
+    createdAt: true, //Tilføjer createdAt felt
+    updatedAt: true, //Tilføjer updatedAt felt
   }
 );
