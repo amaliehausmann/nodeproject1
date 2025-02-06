@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import { dbController } from "./controllers/dbController.js";
 import { carController } from "./Controllers/CarController.js";
+import { brandController } from "./controllers/BrandController.js";
+import { categoryController } from "./controllers/CategoryController.js";
 
 dotenv.config();
 
@@ -18,6 +20,8 @@ app.get("/", (req, res) => {
 
 app.use(dbController);
 app.use(carController);
+app.use(brandController);
+app.use(categoryController);
 
 app.listen(port, () => {
   console.log(`Server runs at http://localhost:${port}`);
